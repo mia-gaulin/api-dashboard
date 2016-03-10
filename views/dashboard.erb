@@ -1,15 +1,48 @@
-<div class="small-6 small-offset-3 columns">
-  <div class="callout primary">
-    <h3>IP</h3>
-    <p>"<%= @ip %>"</p>
+<div class-"medium-12 columns">
+  <div class="medium-6 columns">
+    <div class="callout primary">
+      <h3>Location</h3>
+      <p>
+        <%= @geolocation.city %>,
+        <%= @geolocation.state %>,
+        <%= @geolocation.country %>
+      </p>
+    </div>
   </div>
 
-  <div class="callout primary">
-    <h3>Location</h3>
-    <p>
-      <%= @geolocation.city %>,
-      <%= @geolocation.state %>,
-      <%= @geolocation.country %>
-    </p>
+  <div class="medium-6 columns">
+    <div class="callout primary">
+      <h3>Weather</h3>
+      <p>
+        <li>
+        Summary: <%= @weather_data["summary"] %>
+        </li>
+        <li>Temperature (°F): <%= @weather_data["temperature"] %></li>
+        <li>Precipitation: <%= @weather_data["precipType"].capitalize %>,
+        <%= @weather_data["precipProbability"] * 100 %>% chance</li>
+        <li>Wind Speed: <%= @weather_data["windSpeed"] %> mph
+        </li>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class-"medium-12 columns">
+  <div class="medium-6 columns">
+    <div class="callout secondary">
+      <h3>Events</h3>
+      <p>
+        <%= "THERE'S STUFF" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="medium-6 columns">
+    <div class="callout secondary">
+      <h3>News</h3>
+      <p>
+        <%= "Gross." %>
+      </p>
+    </div>
   </div>
 </div>
