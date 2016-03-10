@@ -30,9 +30,15 @@
 <div class-"medium-12 columns">
   <div class="medium-6 columns">
     <div class="callout secondary">
-      <h3>Events</h3>
+      <h3>Movies</h3>
       <p>
-        <%= "THERE'S STUFF" %>
+        <% @movies.each do |movie| %>
+        <li>Movie: <%= movie["title"] %>
+        <% movie["showtimes"].each do |showtime| %>
+        <li>Theater: <%= showtime["theatre"]["name"] %></li>
+        <li>Time: <%= showtime["dateTime"] %></li></li>
+        <% end %>
+        <% end %>
       </p>
     </div>
   </div>
